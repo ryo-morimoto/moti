@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "updated_at": "2026-04-05",
+  "goal": "Moti のメンタルモデルを低認知負荷で構築するため、言語設計論点を Rust RFC template ベースの RFC 群へ整理する",
+  "scope": "言語設計観点に限定し、実装 M0 と conformance 基盤は今回の RFC 母集団から外す",
+  "candidate_count": 20,
+  "duplicates_remaining": 0,
+  "iterations": [
+    {
+      "pass": 1,
+      "focus": "統合ドラフトの章立て抽出",
+      "discoveries": [
+        "言語設計の母集団は module/visibility/type/kernel/memory/borrow/effects/async/errors/pattern/traits/exists/runtime に大別できる",
+        "trait solver、relational constraints、verified extern、runtime profile、diagnostics は未形式化の独立穴として残っている"
+      ],
+      "changes": [
+        "初期 RFC 候補を 15 本に切った"
+      ],
+      "sources": [
+        "language_spec_v0_13_full.md"
+      ]
+    },
+    {
+      "pass": 2,
+      "focus": "purpose と TODO から mental model 上の不足論点を追加",
+      "discoveries": [
+        "低エントロピーな正規形そのものが独立論点である",
+        "portable public API 規律と数値の portability は open issue 以外にも mental model 上重要である",
+        "diagnostics は UX ではなく spec/conformance 契約である"
+      ],
+      "changes": [
+        "canonical surface / declarative defaults を追加した",
+        "numeric semantics / portable public API / diagnostics を明示的に候補へ入れた"
+      ],
+      "sources": [
+        "docs/purpose.md",
+        "TODO.md",
+        "docs/questions/*.md"
+      ]
+    },
+    {
+      "pass": 3,
+      "focus": "cross-cutting invariant と boundary の切り分け",
+      "discoveries": [
+        "module/import、visibility、portable API、verified extern は 모두『公開面に何を出せるか』で接続している",
+        "trait core、solver、exists、relational constraints は意図的に別制度として扱う必要がある",
+        "memory、borrow、async、FFI capability は suspend boundary を共有する"
+      ],
+      "changes": [
+        "visibility と boundary module を同じ RFC に統合した",
+        "trait core / solver / exists / relational constraints を別 RFC として維持する方針を固定した"
+      ],
+      "sources": [
+        "docs/purpose.md",
+        "TODO.md",
+        "AGENTS.md",
+        "language_spec_v0_13_full.md"
+      ]
+    },
+    {
+      "pass": 4,
+      "focus": "不足 RFC の追加検討",
+      "discoveries": [
+        "実装 M0 と conformance 基盤は未着手だが、今回は言語設計スコープ外である",
+        "性能とバイナリサイズは根本要件だが、今回の RFC 群では cross-cutting lens として index/map に保持する方が重複が少ない"
+      ],
+      "changes": [
+        "実装戦略 RFC は今回の候補から外した",
+        "検証基盤 RFC も今回の候補から外した",
+        "性能 envelope は独立 RFC 化せず、各 RFC と map で参照する方針にした"
+      ],
+      "sources": [
+        "TODO.md",
+        "docs/purpose.md"
+      ]
+    },
+    {
+      "pass": 5,
+      "focus": "重複検査と統合判定",
+      "discoveries": [
+        "0001 / 0002 / 0003 は近いが、構文・解決規則・公開境界で切れる",
+        "0017 と 0018 は重なりやすいが、演算意味論と公開面規律で分ければ維持できる",
+        "0019 と 0020 は接触するが、判定カテゴリと診断契約で責務を分けられる"
+      ],
+      "changes": [
+        "0017 を『演算意味論と portability』に限定した",
+        "0018 を『public surface discipline』に限定した",
+        "0019 と 0020 の境界を明文化した"
+      ],
+      "sources": [
+        "language_spec_v0_13_full.md",
+        "TODO.md"
+      ]
+    },
+    {
+      "pass": 6,
+      "focus": "読順と依存関係の確定",
+      "discoveries": [
+        "低認知負荷の読順は『表面の正規形 → 公開境界と標準提供物 → 純粋コア → 実行モデル → trait/exists → FFI → diagnostics』である",
+        "diagnostics は最後に置くと全規則の露出契約として読める"
+      ],
+      "changes": [
+        "RFC_INDEX.md の順序を固定した",
+        "RFC_MAP.md の依存辺を確定した"
+      ],
+      "sources": [
+        "docs/purpose.md",
+        "TODO.md",
+        "language_spec_v0_13_full.md"
+      ]
+    }
+  ],
+  "final_candidates": [
+    "0001-canonical-surface-and-declarative-defaults",
+    "0002-module-import-resolution",
+    "0003-visibility-and-boundary-modules",
+    "0004-type-theory-foundations",
+    "0005-kernel-safety",
+    "0006-memory-model",
+    "0007-borrowing-lifetimes-and-suspend-boundaries",
+    "0008-effects-handlers-and-state",
+    "0009-structured-concurrency-and-cancellation",
+    "0010-error-model-and-result-boundaries",
+    "0011-pattern-matching-and-dependent-refinement",
+    "0012-trait-core-coherence",
+    "0013-trait-solver-formalization",
+    "0014-existential-abstraction",
+    "0015-relational-constraints",
+    "0016-core-std-and-runtime-profile",
+    "0017-numeric-semantics-and-portability",
+    "0018-portable-public-api-discipline",
+    "0019-verified-extern-evidence-model",
+    "0020-diagnostics-contract"
+  ]
+}
