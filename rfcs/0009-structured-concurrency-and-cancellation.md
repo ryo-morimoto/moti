@@ -10,7 +10,7 @@
 
 ## Summary
 
-Moti の非同期は structured concurrency を前提とし、task lifecycle を構造化 scope の中へ閉じ込める。`Async` と `Parallel` を分け、task は scope 外へ浮遊しない。現行プロファイルでは cancellation と deadline を task context に組み込みで伝播し、cross-domain 実行には `Send` / `Share` 規律を要求する。
+Moti の非同期は structured concurrency を前提とし、task lifecycle を構造化 scope の中へ閉じ込める。この RFC は async / parallel の総論を固定する。task tree の中心規則は `0035`、cancellation / deadline は `0036`、`Send` / `Share` と domain affinity は `0037` で精密化する。
 
 ## Motivation
 
@@ -57,6 +57,9 @@ with_task_group {
 - sibling cancellation は typed result / policy に従って行い、暗黙例外で伝播しない。
 - `Send` / `Share` は user-defined manual impl を許さず、構造導出を採る。
 - lexical borrow と await-affine capability は `Parallel` へ持ち込めない。
+- task tree ownership の正本は `0035` とする。
+- cancellation / deadline 伝播の正本は `0036` とする。
+- `Send` / `Share` と domain affinity の正本は `0037` とする。
 
 ## Drawbacks
 

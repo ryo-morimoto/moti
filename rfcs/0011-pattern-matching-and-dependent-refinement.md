@@ -10,7 +10,7 @@
 
 ## Summary
 
-Moti の pattern matching は exhaustive であり、partial match と guard に依存しない。dependent refinement は inaccessible pattern と absurd pattern で表し、codata は projection-only のため `match` 対象にしない。pattern matching は制御分岐の convenience ではなく、型で追跡可能な case analysis として設計する。
+Moti の pattern matching は exhaustive であり、partial match と guard に依存しない。dependent refinement は inaccessible pattern と absurd pattern で表し、codata は projection-only のため `match` 対象にしない。この RFC は pattern matching の総論を固定する。coverage / exhaustiveness は `0038`、dependent refinement と case tree elaboration は `0039` で精密化する。
 
 ## Motivation
 
@@ -41,6 +41,8 @@ match value {
 - equation style は canonical core へ一方向 elaboration される場合に限って許す。
 - codata は projection-only とし、`match` 対象にしない。
 - record pattern と literal pattern は正規化規則を持つ。
+- coverage / exhaustiveness の正本は `0038` とする。
+- dependent refinement と case tree elaboration の正本は `0039` とする。
 
 ## Drawbacks
 

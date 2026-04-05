@@ -10,7 +10,7 @@
 
 ## Summary
 
-Moti は、状態変化と制御効果を explicit effect discipline の下へ集約する。source では closed effect row だけを露出し、built-in effect と handler discipline を通じて「何が起こりうるか」を型へ残す。現行プロファイルでは handler は deep-only / one-shot を採り、一般局所可変の代わりに handler state を専用構文で持つ。
+Moti は、状態変化と制御効果を explicit effect discipline の下へ集約する。この RFC は effect system の総論を固定する。closed effect row と built-in effect は `0032`、handler と handler state は `0033`、effect abstraction と limited polymorphism は `0034` で精密化する。
 
 ## Motivation
 
@@ -48,6 +48,9 @@ handle counter() with {
 - 継続再開は one-shot とし、複数回 resume を許さない。
 - 一般局所可変は持たず、handler state を専用構文で表す。
 - `Exn` は effect space の一員だが、公開境界への正規化規則は `0010-error-model-and-result-boundaries.md` を正本とする。
+- closed effect row と built-in effect 集合の正本は `0032` とする。
+- handler discipline と handler state の正本は `0033` とする。
+- effect abstraction と limited polymorphism の正本は `0034` とする。
 
 ## Drawbacks
 

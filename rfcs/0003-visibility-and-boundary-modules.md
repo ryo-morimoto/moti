@@ -10,7 +10,7 @@
 
 ## Summary
 
-Moti は `private`、`package`、`pub` の三段階可視性を持ち、effective visibility が参照する型・effect・capability より広くならないことを要求する。FFI や runtime trust boundary を扱う boundary module では、`extern fn` と boundary-only 表現を private に閉じ込め、公開面には safe wrapper だけを出す。
+Moti は `private`、`package`、`pub` の三段階可視性を持ち、公開境界と trust boundary の総論をここで固定する。effective visibility が参照する型・effect・capability より広くならないこと、boundary module では raw contract を private に閉じ込めて safe wrapper だけを公開することを大方針とする。詳細な export closure は `0028`、boundary-only type と boundary module discipline の詳細は `0029` と `0044` で精密化する。
 
 ## Motivation
 
@@ -45,6 +45,8 @@ boundary module posix_file {
 - raw pointer、foreign handle、`Borrow*`、`LocalRoot`、`RuntimeToken` など boundary-only 表現は public/package surface に出してはならない。
 - checker result、evidence handle、verification metadata も boundary-only とし、public/package surface に出してはならない。
 - 公開できるのは safe wrapper と、その wrapper が約束する型付き契約のみである。
+- effective visibility の閉包規則は `0028` を正本とする。
+- boundary-only type の分類と wrapper-only discipline の詳細は `0029` と `0044` を正本とする。
 
 ## Drawbacks
 

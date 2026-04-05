@@ -10,7 +10,7 @@
 
 ## Summary
 
-Moti は、標準提供物の ownership を `core` と `std` に分け、その境界を standard runtime profile で支える。`core` は pure、runtime-independent、portable な API のみを持ち、`std` は runtime-backed API を担う。現行プロファイルでは standard runtime profile が language feature を成立させる最低契約を must / should / may で表す。
+Moti は、標準提供物の ownership を `core` と `std` に分け、その境界を standard runtime profile で支える。この RFC は標準提供物の総論と owner を固定する。`core` / `std` surface boundary は `0041`、standard runtime profile の must / should / may は `0042` で精密化する。
 
 ## Motivation
 
@@ -53,6 +53,8 @@ Moti では「言語にある」と「標準で使える」と「ある runtime 
   - backend-specific reactor 最適化
   - runtime-specific observability 拡張
 - optional library は runtime contract と分ける。
+- `core` / `std` surface boundary の正本は `0041` とする。
+- standard runtime profile の正本は `0042` とする。
 
 ## Drawbacks
 

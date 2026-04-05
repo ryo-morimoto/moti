@@ -10,7 +10,7 @@
 
 ## Summary
 
-Moti は `verified extern` を、boundary module 内の各宣言単位に証跡を attach して安全境界を扱う制度として導入する。言語仕様は concrete proof format を規定せず、abstract checker interface だけを規定する。`logical-safe` への昇格は checker が返す構造化判定結果に基づいて行い、kernel や definitional equality は拡張しない。公開境界の一般規律は `0003-visibility-and-boundary-modules.md` を正本とする。
+Moti は `verified extern` を、boundary module 内の各宣言単位に証跡を attach して安全境界を扱う制度として導入する。この RFC は verified extern の総論を固定する。abstract checker interface は `0043`、wrapper obligations と `logical-safe` 昇格条件は `0044` で精密化する。公開境界の一般規律は `0003-visibility-and-boundary-modules.md` を正本とする。
 
 ## Motivation
 
@@ -52,6 +52,8 @@ pub fn hash(data: Bytes): Result[Digest, HashError] {
 - checker result、evidence handle、verification metadata は boundary-only とし、public/package surface に露出しない。
 - raw foreign contract と boundary-only capability の非露出は `0003-visibility-and-boundary-modules.md` の規律に従う。
 - `verified extern` は definitional equality に参加しない。
+- checker interface と invalidation protocol の正本は `0043` とする。
+- wrapper obligations と `logical-safe` 昇格条件の正本は `0044` とする。
 
 ## Drawbacks
 

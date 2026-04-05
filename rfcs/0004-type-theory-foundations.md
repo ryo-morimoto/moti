@@ -10,7 +10,7 @@
 
 ## Summary
 
-Moti の型基盤は QTT ベースの依存型であり、multiplicity を `0/1/ω` で扱う。universe は cumulative で、`Type : Type` は認めない。proof は relevance を持ちながら erasure 可能であり、未定義値や暗黙の bottom を導入しない。
+Moti の型基盤は QTT ベースの依存型であり、multiplicity を `0/1/ω` で扱う。この RFC は型理論基盤の総論と owner を固定する。universe の詳細は `0023`、proof erasure と relevance は `0024`、bottom 排除と divergence / recursion は `0025` で精密化する。
 
 ## Motivation
 
@@ -39,6 +39,7 @@ Moti の依存型は「強い型を何でも許す」ためのものではない
 - proof relevance を保持しつつ、proof erasure を許す。
 - 暗黙の bottom、`undefined`、kernel-level `panic`、`abort` を持たない。
 - divergence は effect / result / explicit control によって扱い、型基盤へ無制限の bottom を入れない。
+- universe と multiplicity の正本は `0023`、proof erasure の正本は `0024`、divergence / recursion の正本は `0025` とする。
 
 ## Drawbacks
 

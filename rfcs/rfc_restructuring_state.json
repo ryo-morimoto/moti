@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "updated_at": "2026-04-05",
+  "goal": "RFC_INDEX と RFC_MAP を更新し、分割・追加 RFC 0021-0044 を作成し、各 RFC を rfc-review 手順で修正して findings を解消する",
+  "phases": {
+    "index_updated": true,
+    "map_updated": true,
+    "drafts_created": true,
+    "review_pass_complete": true,
+    "final_consistency_check": true
+  },
+  "existing_rfc_updates": [
+    {
+      "number": "0003",
+      "slug": "visibility-and-boundary-modules",
+      "status": "updated_clean"
+    },
+    {
+      "number": "0004",
+      "slug": "type-theory-foundations",
+      "status": "updated_clean"
+    },
+    {
+      "number": "0005",
+      "slug": "kernel-safety",
+      "status": "updated_clean"
+    },
+    {
+      "number": "0007",
+      "slug": "borrowing-lifetimes-and-suspend-boundaries",
+      "status": "updated_clean"
+    },
+    {
+      "number": "0008",
+      "slug": "effects-handlers-and-state",
+      "status": "updated_clean"
+    },
+    {
+      "number": "0009",
+      "slug": "structured-concurrency-and-cancellation",
+      "status": "updated_clean"
+    },
+    {
+      "number": "0011",
+      "slug": "pattern-matching-and-dependent-refinement",
+      "status": "updated_clean"
+    },
+    {
+      "number": "0016",
+      "slug": "core-std-and-runtime-profile",
+      "status": "updated_clean"
+    },
+    {
+      "number": "0019",
+      "slug": "verified-extern-evidence-model",
+      "status": "updated_clean"
+    }
+  ],
+  "items": [
+    {
+      "number": "0021",
+      "slug": "evaluation-strategy-and-order-of-evaluation",
+      "kind": "new",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0001", "0007", "0008", "0009"]
+    },
+    {
+      "number": "0022",
+      "slug": "annotation-discipline-and-bidirectional-typing",
+      "kind": "new",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0004", "0005", "0011", "0013"]
+    },
+    {
+      "number": "0023",
+      "slug": "type-theory-core-and-universes",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0004"]
+    },
+    {
+      "number": "0024",
+      "slug": "proof-erasure-and-relevance",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0004"]
+    },
+    {
+      "number": "0025",
+      "slug": "divergence-totality-and-recursion",
+      "kind": "new",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0004", "0005", "0008", "0010"]
+    },
+    {
+      "number": "0026",
+      "slug": "inductive-and-coinductive-formation",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0005"]
+    },
+    {
+      "number": "0027",
+      "slug": "definitional-equality-and-kernel-conversion",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0005"]
+    },
+    {
+      "number": "0028",
+      "slug": "effective-visibility-and-export-closure",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0003"]
+    },
+    {
+      "number": "0029",
+      "slug": "boundary-modules-and-boundary-only-types",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0003", "0019"]
+    },
+    {
+      "number": "0030",
+      "slug": "borrow-core-place-model-and-reborrow",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0007"]
+    },
+    {
+      "number": "0031",
+      "slug": "suspend-boundaries-and-await-affine-capabilities",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0007", "0009", "0019"]
+    },
+    {
+      "number": "0032",
+      "slug": "effect-rows-and-builtin-effects",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0008"]
+    },
+    {
+      "number": "0033",
+      "slug": "handlers-and-handler-state",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0008"]
+    },
+    {
+      "number": "0034",
+      "slug": "effect-abstraction-and-limited-polymorphism",
+      "kind": "new",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0008"]
+    },
+    {
+      "number": "0035",
+      "slug": "structured-concurrency-core",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0009"]
+    },
+    {
+      "number": "0036",
+      "slug": "cancellation-and-deadline-propagation",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0009", "0010"]
+    },
+    {
+      "number": "0037",
+      "slug": "send-share-and-domain-affinity",
+      "kind": "new",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0009", "0019"]
+    },
+    {
+      "number": "0038",
+      "slug": "pattern-coverage-and-exhaustiveness",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0011"]
+    },
+    {
+      "number": "0039",
+      "slug": "dependent-refinement-and-case-tree-elaboration",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0011", "0022"]
+    },
+    {
+      "number": "0040",
+      "slug": "associated-items-and-projection-surface",
+      "kind": "new",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0012", "0013", "0014"]
+    },
+    {
+      "number": "0041",
+      "slug": "core-std-surface-boundary",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0016"]
+    },
+    {
+      "number": "0042",
+      "slug": "standard-runtime-profile",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0016"]
+    },
+    {
+      "number": "0043",
+      "slug": "verified-extern-checker-interface",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0019", "0020"]
+    },
+    {
+      "number": "0044",
+      "slug": "verified-extern-wrapper-obligations-and-logical-safe",
+      "kind": "split",
+      "status": "reviewed_clean",
+      "review_iterations": 3,
+      "source_rfcs": ["0019", "0003", "0010"]
+    }
+  ]
+}
