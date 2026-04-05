@@ -1,4 +1,4 @@
-# NNNN-<slug>
+# `NNNN-<slug>`
 
 - 状態: `Draft`
 - 日付: YYYY-MM-DD
