@@ -87,5 +87,5 @@ with_task_group {
 
 ## Future possibilities
 
-- stream / channel / actor の上位 abstraction。
+- stream / channel の上位 abstraction は後続 RFC `0046` で扱い、actor は別 RFC 候補として残す。
 - distributed runtime profile への拡張。

@@ -47,14 +47,17 @@
     <tr><td>33</td><td><a href="./0035-structured-concurrency-core.md"><code>0035</code></a></td><td>structured concurrency core</td><td>task tree ownership を独立に固定するため</td></tr>
     <tr><td>34</td><td><a href="./0036-cancellation-and-deadline-propagation.md"><code>0036</code></a></td><td>cancellation と deadline 伝播</td><td>typed cancel / timeout story を閉じるため</td></tr>
     <tr><td>35</td><td><a href="./0037-send-share-and-domain-affinity.md"><code>0037</code></a></td><td><code>Send</code>/<code>Share</code> と domain affinity</td><td>cross-domain 安全条件を型で固定するため</td></tr>
-    <tr><td>36</td><td><a href="./0012-trait-core-coherence.md"><code>0012</code></a></td><td>trait core coherence</td><td>trait の中心不変条件を先に掴むため</td></tr>
-    <tr><td>37</td><td><a href="./0040-associated-items-and-projection-surface.md"><code>0040</code></a></td><td>associated item と projection surface</td><td>trait public contract の shape を決めるため</td></tr>
-    <tr><td>38</td><td><a href="./0013-trait-solver-formalization.md"><code>0013</code></a></td><td>trait solver formalization</td><td>trait core の failure mode を閉じるため</td></tr>
-    <tr><td>39</td><td><a href="./0014-existential-abstraction.md"><code>0014</code></a></td><td>existential abstraction</td><td>trait と別制度の抽象境界を読むため</td></tr>
-    <tr><td>40</td><td><a href="./0015-relational-constraints.md"><code>0015</code></a></td><td>relational constraints</td><td>trait core 外の拡張口を読むため</td></tr>
-    <tr><td>41</td><td><a href="./0019-verified-extern-evidence-model.md"><code>0019</code></a></td><td>verified extern の総論</td><td><code>0043</code> と <code>0044</code> の全体像を先に掴むため</td></tr>
-    <tr><td>42</td><td><a href="./0043-verified-extern-checker-interface.md"><code>0043</code></a></td><td>verified extern checker interface</td><td>checker verdict の contract を固定するため</td></tr>
-    <tr><td>43</td><td><a href="./0044-verified-extern-wrapper-obligations-and-logical-safe.md"><code>0044</code></a></td><td>wrapper obligations と <code>logical-safe</code></td><td>public safe facade の条件を閉じるため</td></tr>
-    <tr><td>44</td><td><a href="./0020-diagnostics-contract.md"><code>0020</code></a></td><td>diagnostics contract</td><td>全 RFC の failure surface を最後にまとめるため</td></tr>
+    <tr><td>36</td><td><a href="./0045-alloc-surface-and-explicit-allocation.md"><code>0045</code></a></td><td><code>alloc</code> surface と explicit allocation</td><td><code>Allocator</code> facade の same-domain 制約を含めて low-level surface を閉じるため</td></tr>
+    <tr><td>37</td><td><a href="./0046-channels-and-async-streams.md"><code>0046</code></a></td><td>channels と async streams</td><td>structured async の上位 abstraction を detached なしで読むため</td></tr>
+    <tr><td>38</td><td><a href="./0012-trait-core-coherence.md"><code>0012</code></a></td><td>trait core coherence</td><td>trait の中心不変条件を先に掴むため</td></tr>
+    <tr><td>39</td><td><a href="./0040-associated-items-and-projection-surface.md"><code>0040</code></a></td><td>associated item と projection surface</td><td>trait public contract の shape を決めるため</td></tr>
+    <tr><td>40</td><td><a href="./0047-canonical-formatter-contract.md"><code>0047</code></a></td><td>canonical formatter 契約</td><td>import / effect row / qualified form の owner を踏まえて表示の正規形を固定するため</td></tr>
+    <tr><td>41</td><td><a href="./0013-trait-solver-formalization.md"><code>0013</code></a></td><td>trait solver formalization</td><td>trait core の failure mode を閉じるため</td></tr>
+    <tr><td>42</td><td><a href="./0014-existential-abstraction.md"><code>0014</code></a></td><td>existential abstraction</td><td>trait と別制度の抽象境界を読むため</td></tr>
+    <tr><td>43</td><td><a href="./0015-relational-constraints.md"><code>0015</code></a></td><td>relational constraints</td><td>trait core 外の拡張口を読むため</td></tr>
+    <tr><td>44</td><td><a href="./0019-verified-extern-evidence-model.md"><code>0019</code></a></td><td>verified extern の総論</td><td><code>0043</code> と <code>0044</code> の全体像を先に掴むため</td></tr>
+    <tr><td>45</td><td><a href="./0043-verified-extern-checker-interface.md"><code>0043</code></a></td><td>verified extern checker interface</td><td>checker verdict の contract を固定するため</td></tr>
+    <tr><td>46</td><td><a href="./0044-verified-extern-wrapper-obligations-and-logical-safe.md"><code>0044</code></a></td><td>wrapper obligations と <code>logical-safe</code></td><td>public safe facade の条件を閉じるため</td></tr>
+    <tr><td>47</td><td><a href="./0020-diagnostics-contract.md"><code>0020</code></a></td><td>diagnostics contract</td><td>全 RFC の failure surface を最後にまとめるため</td></tr>
   </tbody>
 </table>

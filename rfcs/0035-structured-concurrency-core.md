@@ -82,5 +82,5 @@ with_task_group {
 
 ## Future possibilities
 
-- actor / stream / channel を task tree 上に乗せる上位 RFC。
-- distributed structured concurrency profile。
+- stream / channel を task tree 上に乗せる上位 RFC `0046`。
+- actor と distributed structured concurrency profile の後続 RFC。

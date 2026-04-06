@@ -62,9 +62,9 @@ pub fn parse(input: Bytes): Result[Ast, ParseError] {
 ## Unresolved questions
 
 - 高レベル層の reuse analysis を仕様へどこまで書くか。
-- low-level buffer abstraction の最小集合をどこで固定するか。
+- `alloc` surface と low-level buffer abstraction の最小集合をどこで固定するか。これは後続 RFC `0045` の主対象である。
 
 ## Future possibilities
 
-- allocator policy を optional profile として切る。
+- allocator policy と `alloc` surface を後続 RFC `0045` で切る。
 - 高レベル / 低レベル変換の audit tooling。

@@ -38,7 +38,7 @@ import std.fs as fs
 - `core` は hidden runtime token や implicit driver を要求してはならない。
 - `std` は runtime-backed API を表面で明示し、必要な effect / result / boundary contract を持たなければならない。
 - `core` と `std` の区別は package namespace と documentation owner の両方に反映する。
-- `core` 向け test support は scope 内未解決であり、`alloc` 相当の中間層は reserved extension point である。
+- `core` 向け test support は scope 内未解決であり、`alloc` 相当の中間層は後続 RFC `0045` の候補として reserved extension point である。
 - optional library は `std` と区別し、標準 runtime contract の一部として扱わない。
 
 ## Drawbacks
@@ -66,6 +66,6 @@ import std.fs as fs
 
 ## Future possibilities
 
-- `alloc` 相当の中間層を導入する後続 RFC。
+- `alloc` 相当の中間層を導入する後続 RFC `0045`。
 - `core` / `std` / profile を跨ぐ API ownership lint。
 - no-std profile の追加文書。

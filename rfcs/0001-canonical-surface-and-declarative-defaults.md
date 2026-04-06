@@ -62,10 +62,10 @@ fn incr(x: Int): Int {
 
 ## Unresolved questions
 
-- formatter が language law としてどこまで normative になるか。
+- formatter が language law としてどこまで normative になるか。これは後続 RFC `0047` の主対象である。
 - sugar を将来許す場合の admission criteria をどこまで厳密に書くか。
 
 ## Future possibilities
 
 - 一方向 elaboration が明確で、読み手のメンタルモデルを増やさない sugar の追加。
-- formatter / linter / canonical printer を unified pipeline として扱うための後続 RFC。
+- formatter / linter / canonical printer を unified pipeline として扱う後続 RFC `0047`。
